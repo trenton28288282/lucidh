@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Announcements — Team Xylo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo-badge" aria-hidden="true">X</span>
+        <div class="brand-text">
+          <div class="brand-name">Team Xylo</div>
+          <div class="brand-sub">Announcements</div>
+        </div>
+      </div>
+
+      <nav class="links" aria-label="External links">
+        <a id="discord-link" href="https://discord.gg/AEP6aAnJ" target="_blank" rel="noopener">Discord</a>
+        <a id="tiktok-link" href="https://www.tiktok.com/@team.xylo_tornado?_r=1&_t=ZT-95AMIutL27C" target="_blank" rel="noopener">TikTok</a>
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark / light theme" aria-label="Toggle theme">
+          <span class="sun" aria-hidden="true">☀️</span>
+          <span class="moon" aria-hidden="true">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="announcements-card" aria-live="polite" aria-busy="true">
+      <div class="card-header">
+        <h1>Latest</h1>
+        <div class="header-actions">
+          <button class="btn btn-ghost" id="refresh-btn" title="Reload announcements" aria-label="Reload announcements">↻</button>
+        </div>
+      </div>
+
+      <div id="announcements-container" class="announcements-container">
+        <!-- announcements.html will be loaded here. Edit announcements.html to change announcements. -->
+        <div class="loading">Loading announcements…</div>
+      </div>
+    </section>
+
+    <footer class="footer">Made with ♥ — Team Xylo</footer>
+  </main>
+
+  <!-- Join Discord modal -->
+  <div id="discord-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <h2 id="modal-title">Join our discord!</h2>
+      <p class="modal-text">Stay updated and chat with the team.</p>
+      <div class="modal-actions">
+        <a id="modal-discord-link" class="btn" href="https://discord.gg/AEP6aAnJ" target="_blank" rel="noopener">Open Discord</a>
+        <button id="copy-discord" class="btn btn-ghost">Copy Invite</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
